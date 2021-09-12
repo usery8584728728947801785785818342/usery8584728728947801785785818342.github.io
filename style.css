@@ -1,0 +1,131 @@
+#img_h{
+  width: 60px;
+  padding-top:8px;
+  float: left;
+}
+
+header, footer {
+ background-color: #38b6ff;
+ padding: 10px;
+}
+main {
+ padding: 10px;
+ background-color: silver;
+}
+.post {
+ background-color: white;
+ padding: 20px;
+ border-radius: 10px;
+ margin-bottom: 20px;
+ display: flex;
+}
+.post img {
+ margin: 20px;
+}
+.footer-columns {
+ display: flex;
+}
+.footer-column {
+ flex: 50%;
+ margin: 20px;
+}
+.comment {
+ background-color: white;
+ padding: 20px;
+ border-radius: 10px;
+ margin-top: 10px;
+}
+.author {
+ margin-top: 0px;
+ margin-bottom: 10px;
+}
+.date {
+ color: silver;
+ margin-top: 0px;
+ margin-bottom: 10px;
+}
+
+#menu1{
+ position: relative; /*Положение элемента устанавливается относительно его исходного места*/
+ display: block;     /*Элемент показывается как блочный*/
+ width: 100%;
+ height: auto;
+ z-index: 10;
+}
+
+#menu1 ul{
+ position: relative;
+ display: block;
+ margin: 0px;      /*Устанавливает величину отступа от каждого края элемента*/
+ padding: 0px;     /*Устанавливает значение полей вокруг содержимого элемента*/
+ width: 100%;
+ height: auto;
+ list-style: none;
+}
+
+#menu1 > ul::after{ /*используется для вывода желаемого текста после содержимого элемента*/
+ display: block;
+ width: 100%;
+ height: 0px;
+ clear: both;     /*Отменяет обтекание элемента одновременно с правого и левого края*/
+ content: " ";
+}
+#menu1 ul li{
+ position: relative;
+ display: block;
+ float: left;     /*Выравнивает элемент по левому краю*/
+ width: auto;
+ height: auto;
+}
+#menu1 ul li a{
+ display: block;
+ padding: 9px 25px 0px 25px;
+ font-size: 14px;
+ line-height: 1.3em;
+ text-decoration: none;
+ font-weight: bold;
+ text-transform: uppercase; /*Все символы текста становятся прописными (верхний регистр)*/
+ height: 36px;
+ box-sizing: border-box; /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+ color: white;
+}
+#menu1 ul li ul{
+ position: absolute; /*Указывает, что элемент абсолютно позиционирован, 
+                      при этом другие элементы отображаются на веб-странице 
+					  словно абсолютно позиционированного элемента и нет*/
+ top: 36px;
+ left: 0px;
+ display: none;
+ width: 200px;
+ background: #38b6ff;
+}
+#menu1 ul li:hover ul{ /*Определяет стиль элемента при наведении на него курсора мыши*/
+ display: block;
+}
+#menu1 ul li ul li{
+ float: none;   /*Обтекание элемента не задается*/
+ width: 100%;
+}
+#menu1 ul li ul li a{
+ display: block;
+ text-transform: none;
+ height: auto;
+ padding: 7px 25px;
+ width: 100%;
+ box-sizing: border-box;
+ border-top: 1px solid #ffffff;
+ color: white;
+}
+#menu1 ul li ul li:first-child a{ /*рименяет стилевое оформление к первому дочернему элементу своего родителя*/
+ border-top: 0px;
+}
+/*стилі для зображення в плагіні*/
+.carousele{
+ margin: 10px;
+}
+.carousele div img{
+ width: 100%
+}
+a{
+	font-family: 'Source Sans Pro', sans-serif;
+}
